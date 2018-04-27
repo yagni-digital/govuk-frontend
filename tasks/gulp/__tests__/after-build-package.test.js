@@ -13,9 +13,11 @@ describe('building package/', () => {
   describe('when running copy-to-destination', () => {
     // Check to have all the components and nothing else
     it('should copy all components folders', () => {
-      let expectedPackageComponentList = lib.SrcComponentList.slice()
-      expectedPackageComponentList.sort()
-      expect(lib.PackageComponentList).toEqual(expectedPackageComponentList)
+      let expectedFilesAndFolders = lib.SrcComponentList.slice()
+      // We expect the package to contain files from source that are not in folders
+      expectedFilesAndFolders.push('package.json', 'README.md', 'govuk-frontend.scss', 'govuk-frontend-ie8.scss', 'govuk-frontend.js')
+      expectedFilesAndFolders.sort()
+      expect(lib.PackageComponentList).toEqual(expectedFilesAndFolders)
     })
   })
 
