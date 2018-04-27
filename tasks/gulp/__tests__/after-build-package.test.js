@@ -9,10 +9,10 @@ const configPaths = require('../../../config/paths.json')
 
 const sassRender = util.promisify(sass.render)
 
-describe('building packages/', () => {
+describe('building package/', () => {
   describe('when running copy-to-destination', () => {
     // Check to have all the components and nothing else
-    it('should copy all components packages', () => {
+    it('should copy all components folders', () => {
       let expectedPackageComponentList = lib.SrcComponentList.slice()
       expectedPackageComponentList.sort()
       expect(lib.PackageComponentList).toEqual(expectedPackageComponentList)
@@ -21,7 +21,7 @@ describe('building packages/', () => {
 
   function defineTestsForComponent (componentName) {
     describe('when publishing ' + componentName, () => {
-      // Check component files in package
+      // Check files in each folder
       it('should copy the right files to package/', () => {
         let actualPackageFiles = lib.packageFilesForComponent(componentName)
         let expectedPackageFiles = lib.expectedPackageFilesForComponent(componentName)
@@ -36,7 +36,7 @@ describe('building packages/', () => {
 
   describe('after running copy-to-destination', () => {
     it('scss files should compile without throwing an exeption', async () => {
-      const allScssFile = path.join(configPaths.package, 'all', '_all.scss')
+      const allScssFile = path.join(configPaths.package, 'govuk-frontend.scss')
       await sassRender({ file: allScssFile })
     })
   })
