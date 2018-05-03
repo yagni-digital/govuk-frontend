@@ -73,7 +73,9 @@ Find out when to use the Date input component in your service in the [GOV.UK Des
       "id": "dob",
       "name": "dob",
       "fieldset": {
-        "legendText": "What is your date of birth?"
+        "legend": {
+          "text": "What is your date of birth?"
+        }
       },
       "hint": {
         "text": "For example, 31 3 1980"
@@ -157,7 +159,9 @@ Find out when to use the Date input component in your service in the [GOV.UK Des
     {{ govukDateInput({
       "id": "dob-errors",
       "fieldset": {
-        "legendText": "What is your date of birth?"
+        "legend": {
+          "text": "What is your date of birth?"
+        }
       },
       "hint": {
         "text": "For example, 31 3 1980"
@@ -248,7 +252,9 @@ Find out when to use the Date input component in your service in the [GOV.UK Des
       "id": "dob-day-error",
       "name": "dob-day-error",
       "fieldset": {
-        "legendText": "What is your date of birth?"
+        "legend": {
+          "text": "What is your date of birth?"
+        }
       },
       "hint": {
         "text": "For example, 31 3 1980"
@@ -337,7 +343,9 @@ Find out when to use the Date input component in your service in the [GOV.UK Des
       "id": "dob-month-error",
       "name": "dob-month-error",
       "fieldset": {
-        "legendText": "What is your date of birth?"
+        "legend": {
+          "text": "What is your date of birth?"
+        }
       },
       "hint": {
         "text": "For example, 31 3 1980"
@@ -426,7 +434,9 @@ Find out when to use the Date input component in your service in the [GOV.UK Des
       "id": "dob-year-error",
       "name": "dob-year-error",
       "fieldset": {
-        "legendText": "What is your date of birth?"
+        "legend": {
+          "text": "What is your date of birth?"
+        }
       },
       "hint": {
         "text": "For example, 31 3 1980"
@@ -576,7 +586,7 @@ If you are using Nunjucks,then macros take the following arguments
 
 <td class="govuk-table__cell ">No</td>
 
-<td class="govuk-table__cell ">Arguments for the fieldset component (e.g. legendText, legendHintText, errorMessage). See fieldset component.</td>
+<td class="govuk-table__cell ">Arguments for the fieldset component (e.g. legend). See fieldset component.</td>
 
 </tr>
 

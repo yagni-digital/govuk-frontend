@@ -359,7 +359,9 @@ describe('Checkboxes', () => {
           }
         ],
         fieldset: {
-          legendHtml: 'What is your <b>nationality</b>?'
+          legend: {
+            html: 'What is your <b>nationality</b>?'
+          }
         }
       })
 

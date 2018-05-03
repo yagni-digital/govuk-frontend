@@ -355,7 +355,9 @@ describe('Radios', () => {
           }
         ],
         fieldset: {
-          legendHtml: 'Have <b>you</b> changed your name?'
+          legend: {
+            html: 'Have <b>you</b> changed your name?'
+          }
         }
       })
 
