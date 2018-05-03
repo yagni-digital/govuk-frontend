@@ -11,21 +11,21 @@ const sassRender = util.promisify(sass.render)
 
 describe('building packages/', () => {
   describe('when running copy-to-destination', () => {
-    // Check to have all the components packages and nothing else
+    // Check to have all the components and nothing else
     it('should copy all components packages', () => {
-      let expectedPackagesComponentList = lib.SrcComponentList.slice()
-      expectedPackagesComponentList.sort()
-      expect(lib.PackagesComponentList).toEqual(expectedPackagesComponentList)
+      let expectedPackageComponentList = lib.SrcComponentList.slice()
+      expectedPackageComponentList.sort()
+      expect(lib.PackageComponentList).toEqual(expectedPackageComponentList)
     })
   })
 
   function defineTestsForComponent (componentName) {
     describe('when publishing ' + componentName, () => {
-      // Check component files in packages
-      it('should copy the right files to packages', () => {
-        let actualPackagesFiles = lib.packagesFilesForComponent(componentName)
-        let expectedPackagesFiles = lib.expectedPackagesFilesForComponent(componentName)
-        expect(actualPackagesFiles).toEqual(expectedPackagesFiles)
+      // Check component files in package
+      it('should copy the right files to package/', () => {
+        let actualPackageFiles = lib.packageFilesForComponent(componentName)
+        let expectedPackageFiles = lib.expectedPackageFilesForComponent(componentName)
+        expect(actualPackageFiles).toEqual(expectedPackageFiles)
       })
     })
   }
@@ -36,7 +36,7 @@ describe('building packages/', () => {
 
   describe('after running copy-to-destination', () => {
     it('scss files should compile without throwing an exeption', async () => {
-      const allScssFile = path.join(configPaths.packages, 'all', '_all.scss')
+      const allScssFile = path.join(configPaths.package, 'all', '_all.scss')
       await sassRender({ file: allScssFile })
     })
   })
