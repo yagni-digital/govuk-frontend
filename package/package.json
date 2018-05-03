@@ -1,7 +1,7 @@
 {
-  "name": "@govuk-frontend/govuk-frontend",
+  "name": "@govuk-frontend/govuk-frontend-test-release-process",
   "description": "GOV.UK Frontend contains the code you need to start building a user interface for government platforms and services.",
-  "version": "0.0.30-alpha",
+  "version": "0.0.31-alpha",
   "main": "govuk-frontend.js",
   "engines": {
     "node": ">=6.0"

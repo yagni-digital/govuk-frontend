@@ -28,7 +28,7 @@
   // increase the bottom margin to include it (s2).
   $button-shadow-size: $govuk-border-width-form-element;
 
-  .govuk-c-button {
+  .govuk-button {
     @include govuk-font-regular;
     @include govuk-typography-responsive(
       $govuk-font-19,
@@ -51,7 +51,6 @@
     background-color: $govuk-button-colour;
     -webkit-box-shadow: 0 $button-shadow-size 0 $govuk-button-shadow-colour;
             box-shadow: 0 $button-shadow-size 0 $govuk-button-shadow-colour; // s0
-    font-family: $govuk-font-stack;
     text-align: center;
     vertical-align: top;
     cursor: pointer;
@@ -132,9 +131,9 @@
     }
   }
 
-  .govuk-c-button--disabled,
-  .govuk-c-button[disabled="disabled"],
-  .govuk-c-button[disabled] {
+  .govuk-button--disabled,
+  .govuk-button[disabled="disabled"],
+  .govuk-button[disabled] {
     opacity: (.5);
     background: $govuk-button-colour;
 
@@ -157,7 +156,7 @@
     }
   }
 
-  .govuk-c-button--start {
+  .govuk-button--start {
     @include govuk-typography-weight-bold;
     @include govuk-typography-responsive(
       $govuk-font-24,
@@ -174,7 +173,7 @@
     background-repeat: no-repeat;
     background-position: 100% 50%;
 
-    @include govuk-h-device-pixel-ratio {
+    @include govuk-device-pixel-ratio {
       background-image: govuk-file-url("icon-pointer-2x.png");
       background-size: 30px 19px;
     }
@@ -186,12 +185,12 @@
 
   $offset: 2;
 
-  .govuk-c-button {
+  .govuk-button {
     padding-top: ($govuk-spacing-scale-2 - $govuk-border-width-form-element - ($button-shadow-size / 2) + $offset); // s1
     padding-bottom: ($govuk-spacing-scale-2 - $govuk-border-width-form-element - ($button-shadow-size / 2) - $offset + 1); // s1
   }
 
-  .govuk-c-button--start {
+  .govuk-button--start {
     padding-top: ($govuk-spacing-scale-2 - $govuk-border-width-form-element - ($button-shadow-size / 2) + $offset); // s1
     padding-bottom: ($govuk-spacing-scale-2 - $govuk-border-width-form-element - ($button-shadow-size / 2) - $offset + 1); // s1
   }

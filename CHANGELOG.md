@@ -2,7 +2,7 @@
 
 Note: We're not following semantic versioning yet, we are going to talk about this soon.
 
-## Unreleased
+## Test release
 
 Breaking change:
 

@@ -114,9 +114,6 @@ gulp.task('js:compile', () => {
     .pipe(gulpif(isDist,
       rename({
         extname: '.min.js'
-      }),
-      rename({
-        basename: 'app'
       })
     ))
     .pipe(eol())
