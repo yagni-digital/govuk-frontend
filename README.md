@@ -64,24 +64,11 @@ npm login
 Enter the username, password and email address you were provided with, when
 prompted.
 
-You can install all components or one or more individual components depending on
-your needs.
-
-To install all components, run:
+To install govuk-frontend, run:
 
 ```
-npm install --save @govuk-frontend/all
+npm install --save @govuk-frontend/govuk-frontend
 ```
-
-To install individual components (for example, a button), run:
-
-```
-npm install --save @govuk-frontend/button
-```
-
-You can find a list of all components in the [packages
-directory](https://github.com/alphagov/govuk-frontend/tree/master/packages).
-Each component has a README with installation and usage instructions.
 
 After you have installed GOV.UK Frontend the `@govuk-frontend` package will
 appear in your `node_modules` folder.
@@ -95,7 +82,7 @@ imports) if you want to override GOV.UK Frontend with your own styles.
 1. To import all components, add the below to your Sass file:
 
   ```CSS
-  @import "node_modules/@govuk-frontend/all/all";
+  @import "node_modules/@govuk-frontend/govuk-frontend";
   ```
 
 2. To import an individual component (for example a button), add the below to
@@ -161,7 +148,7 @@ You need to import the GOV.UK Frontend scripts into the main JavaScript file in 
 
 To import and initialise all components that require JavaScript, add the below to your main JavaScript file:
 ```JS
-import All from '@govuk-frontend/all/all'
+import All from '@govuk-frontend/govuk-frontend'
 ```
 
 To import an individual component (for example a button), add the below to your main JavaScript file:
@@ -178,7 +165,7 @@ new Button().init()
 Note: The import syntax you should use depends on the JavaScript module format used by your bundler. For example, if it is using `CommonJS`, use
 
 ```JS
-require('@govuk-frontend/all/all')
+require('@govuk-frontend/govuk-frontend')
 ```
 
 #### Polyfills
