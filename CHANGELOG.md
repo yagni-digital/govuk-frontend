@@ -5,6 +5,21 @@ Note: We're not following semantic versioning yet, we are going to talk about th
 ## Unreleased
 
 Breaking change:
+- Restructure project to enable it to be published as a single package
+  ([PR #680](https://github.com/alphagov/govuk-frontend/pull/680))
+  This is ground work to enable the project to be published as a single package by:
+  - removing components' package.json files
+  - moving "all" files are moved into into root
+  - renaming "packages" folder to "package"
+  - removing Lerna
+  - updating release scripts
+  - creating a new package.json
+  - updating documentation
+  - update any tests and build pipelines to support this
+  
+  The single package will be published under a new name. 
+  There are more changes to be done to folder structure to ensure
+  entry points are more understandable.
 
 - Remove -c -o -h layer prefixes
   ([PR #644](https://github.com/alphagov/govuk-frontend/pull/644))
