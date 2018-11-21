@@ -40,6 +40,23 @@ params:
     type: object
     required: false
     description: HTML attributes (for example data attributes) to add to the navigation item anchor.
+- name: signout
+  type: object
+  required: false
+  description: The details of the signout link if there is one
+  params:
+  - name: text
+    type: string
+    required: true
+    description: Text of the link.
+  - name: href
+    type: string
+    required: true
+    description: Url of the anchor. Both `href` and `text` attributes for navigation items need to be provided to create an item.
+  - name: classes
+    type: string
+    required: false
+    description: Classes to add to the signout link.
 - name: navigationClasses
   type: string
   required: false
@@ -88,6 +105,14 @@ examples:
   data:
     serviceName: Service Name
     serviceUrl: '/components/header'
+
+- name: with signout
+  desciprtion: If the user is logged in you'll need to provide them with a signout option.
+  data:
+    serviceName: ServiceName
+    signout:
+      href: '/signout'
+      text: Sign Out
 
 - name: with navigation
   data:

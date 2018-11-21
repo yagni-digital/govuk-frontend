@@ -62,6 +62,32 @@
         ]
     },
     {
+        "name": "signout",
+        "type": "object",
+        "required": false,
+        "description": "The details of the signout link if there is one",
+        "params": [
+            {
+                "name": "text",
+                "type": "string",
+                "required": true,
+                "description": "Text of the link."
+            },
+            {
+                "name": "href",
+                "type": "string",
+                "required": true,
+                "description": "Url of the anchor. Both `href` and `text` attributes for navigation items need to be provided to create an item."
+            },
+            {
+                "name": "classes",
+                "type": "string",
+                "required": false,
+                "description": "Classes to add to the signout link."
+            }
+        ]
+    },
+    {
         "name": "navigationClasses",
         "type": "string",
         "required": false,

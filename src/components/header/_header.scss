@@ -94,6 +94,11 @@
     }
   }
 
+  .govuk-header__link--signout {
+    float: right;
+    font-weight: bold;
+  }
+
   .govuk-header__link--homepage {
     // Font size needs to be set on the link so that the box sizing is correct
     // in Firefox

@@ -62,6 +62,10 @@
     </a>
     {% endif %}
 
+    {% if params.signout.href and params.signout.text %}
+      <a href="{{ params.signout.href }}" class="govuk-header__link govuk-header__link--signout {{ params.signout.classList }}">{{ params.signout.text }}</a>
+    {% endif %}
+
     {% if params.navigation %}
     <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
     <nav>
@@ -69,7 +73,7 @@
         {% for item in params.navigation %}
           {% if item.href and item.text %}
             <li class="govuk-header__navigation-item{{ ' govuk-header__navigation-item--active' if item.active }}">
-              <a class="govuk-header__link" href="{{ item.href }}"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+              <a class="govuk-header__link {{ item.linkClassList }}" href="{{ item.href }}"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>
                 {{ item.text }}
               </a>
             </li>
